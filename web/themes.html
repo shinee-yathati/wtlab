@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <style>
+            .main {
+                height: auto;
+                position: absolute;
+                background-color:#ff9966;
+                
+                }
+            .left {
+                width:300px;
+            height:580px;
+            float:left;
+            padding-left: 10px;
+            margin-top: 10px;
+           
+        }
+        .right {
+            background-color: antiquewhite;
+            float:right;
+            height:78vh;
+            
+            width:79%;
+            overflow:hidden;
+        }
+        .top {
+            width: 100%;
+            margin-right: 10%;
+        }
+        
+            img{
+        max-height: 100%;max-width: 100%; width: 100%; height:100%; 
+        }
+        
+        .top td:hover
+            {
+            background-color:#8382ab;
+            color: antiquewhite;
+            }
+        .top th
+            {
+            background-color: #ff9966;
+            color:white;
+            font-size: 400%;
+           
+            }
+            .top td
+            {
+            background-color: #ff9966;
+            color:white;
+            font-size: 20px;
+            }
+            .top a {
+                color: white;
+            }
+            a {
+                text-decoration: none;
+            }
+            .top img {
+                width:80%;            }
+            a {
+                color:black;
+                
+            }
+           
+        </style>
+        <script>
+            function changecolor(color) {
+            document.body.style.backgroundColor=color;
+            if (color=='dark'){
+                document.body.style.fontFamily="cursive";
+                document.body.style.fontSize="15px";
+                document.getElementById('top').style.color="#003cb3";
+                document.getElementById('te').style.background="#003cb3";
+                document.getElementById('ta').style.background="#003cb3";
+                document.getElementById('td').style.background="#003cb3";
+                document.getElementById('tl').style.background="#003cb3";
+                document.getElementById('tn').style.background="#003cb3";
+                document.getElementById('tp').style.background="#003cb3";
+                document.getElementById('main').style.background="#003cb3";
+                document.getElementById('right').src='https://media.gettyimages.com/id/1190548731/photo/rear-view-of-college-student-raising-her-hand-in-amphitheater.jpg?s=612x612&w=0&k=20&c=BG3Csx-jS7TW_woAZWAPNfnAa1X_5YlYZjwyQG7c21w=';
+                document.getElementById('left').style.background="#003cb3 ";
+                document.getElementById('left-el').style.color="black";
+                
+                
+                
+                
+        }
+            else 
+            {
+                document.body.style.fontFamily="lucida sans";
+                document.body.style.fontSize="20px";
+                document.getElementById('top').style.color="#804d00";
+                document.getElementById('te').style.background="#804d00";
+                document.getElementById('ta').style.background="#804d00";
+                document.getElementById('td').style.background="#804d00";
+                document.getElementById('tl').style.background="#804d00";
+                document.getElementById('tn').style.background="#804d00";
+                document.getElementById('tp').style.background="#804d00";
+                document.getElementById('main').style.background="#804d00";
+                document.getElementById('right').src='https://media.gettyimages.com/id/143071446/photo/student-working-in-library-at-night.jpg?s=612x612&w=0&k=20&c=o46eCyJIm9DkkwzWwOjsVGKVzkf4FF4QHiLaeNwzfmI=';
+                document.getElementById('left').style.background="#804d00 ";
+                document.getElementById('left-el').style.color="black";
+                document.getElementById('left').style.fontsize="50%";
+            }
+            
+        }
+        const leftEl = document.getElementById('left');
+const rightEl = document.getElementById('right');
+
+leftEl.addEventListener('click', (event) => {
+  if (event.target.tagName === 'li') {
+    rightEl.innerHTML = event.target.innerHTML;
+  }
+});
+        </script>
+    </head>
+    <body>
+        <div class="main" id="main">
+            <div class="top" id="top">
+                <table height="7%" id="tab" >
+                    <tr>
+                      <th bgcolor="#0c0a5e" id="te"><img src="C:\Users\Dell\Downloads\anits.jpg" width="65%" height="65%" id="tb"></th>
+                     <th id="ta"><marquee direction="left">Anil Neerukonda Institute of technology and sciences</marquee></th>
+                     </tr>
+                 </table>   
+                 <table width="100%" bgcolor="#0f52ba" cellpadding="10" border="1" cellspacing="0" style="border-width: 5px; margin-left: 0%;">
+                     <tr align="center">
+                         <td id="td"><a href="login.html" target="r" > Login</a></td>
+                         <td id="tl"><a href="register.html" target="r">registrations</a></td>
+                         <td id="tn">catalog</td>
+                         <td id="tp">cart</td>
+                     </tr>
+                 </table> 
+            </div>
+            <div class="left" id="left">
+                <h3 style="font-size: 30px;"  id="h" >DEPARTMENTS</h3>
+                 <OL style="margin-left: 15%;" id="left-el">
+                 <li style="font-size:120%" id="cse-link"  ><a href="cse.html" target="right" >CSE</a></li><br>
+                 <li style="font-size:120%"> <a href="ece.html" target="r">ECE</a></li><br>
+                 <li style="font-size:120%"><a href="eee.html" target="r">EEE</a></li></OL><br>
+
+                 <li style="font-size:120%" ><a href="pr.html" target="r">UNIVERSITY DETAILS</a></li><br>
+                <li style="font-size:120%"><a href="timetable.html" target="r">TIME TABLE</a></li><br>
+                 <li style="font-size:120%"><a href="resume1.html" target="r">RESUME</a></li><br><br><br>
+                <button id="toggle-theme" onclick="changecolor('light')">
+                         theme1
+                 </button>
+                <button id="toggle-theme2" onclick="changecolor('dark')">
+                        theme2
+                </button>
+                
+            </div>
+            
+            
+            <div class="right" >
+                <img src="https://media.gettyimages.com/id/182059956/photo/large-group-of-students-writing-in-notebooks.jpg?s=612x612&w=0&k=20&c=Q2AJMsAJDb8VXEvxNRStYzTcqRBxE3IgV2YzGA10Mng=" id="right">
+            </div>
+        </div>
+    </body>
+</html>

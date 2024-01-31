@@ -1,0 +1,20 @@
+
+<html>
+<head>
+   <script>
+            document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        alert("Right-click is disabled on this page.")
+    });
+   </script>
+    
+    <frameset rows ="22%,78%" >
+        <frame name="top" src="top.html" noresize="noresize"></frame>
+        
+        <frameset cols ="15%,75%" >
+            <frame name="l" src="left.html" noresize="noresize"></frame>
+            <frame name="r" src="right.html" noresize="noresize"></frame>
+        </frameset>
+    </frameset>
+</head>
+</html>

@@ -1,0 +1,65 @@
+
+
+a:hover {
+    color:black;
+   
+}
+li {
+    font-display: 10px;
+    font-weight: bolder;
+    font-size: 50%;
+}
+
+body{
+    background-color:#FFDB58 ;
+    overflow: hidden;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20220920/pngtree-professional-and-versatile-dark-blue-studio-background-with-black-vignetteideal-for-business-reports-digital-projects-and-website-templates-photo-image_35818648.jpg);background-repeat: no-repeat; background-size: cover;
+    background-position: 50%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    background-blend-mode:normal;
+    
+    color: azure;
+}
+.heading {
+    background-color: aquamarine;
+    text-align: center;
+    color: darkblue;
+    border-radius: 0%;
+    font-size: 18px;
+}
+.two h2 {
+    color: azure;;
+     text-align: center;
+    
+     font-size: 30px}
+.two ol {
+    font-size: 15px;
+    color: azure;
+}
+.heading img {
+    align-items: first baseline;
+    width: 80px;
+}
+.middle a {
+   font-size: 20px;
+}
+.middle {
+    background-color:#FFDB58;
+}
+.pr {
+    background-color: powderblue;
+    font-size: large;
+} .one1 {
+       font-weight: bold;
+      align-items: center;
+      margin-left: 10%;
+      padding:10px
+}
+.two a {
+    color:white;
+}
+.two a:hover {
+    color:tomato;
+}
+
+    

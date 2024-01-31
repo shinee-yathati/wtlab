@@ -1,0 +1,88 @@
+<html>
+<head>
+<script>
+ 
+ let res = document.getElementById('result');
+
+function fn() {
+    let img = new Image();
+    img.src =
+        'index.jpg';
+    document.getElementById('body').appendChild(img);
+    res.innerHTML = "Image Element Added.";
+}
+    </script>
+    <style>
+        body {
+            background-color:lightcoral;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body style="text-align: center;"  id="body" style="background-color: aqua;">
+    <script>
+        function fd() {
+            if( document.fm.name.value=="")
+            {
+                alert("please enter your name");
+                document.fm.name.focus();
+                return false;
+            }
+            else if (document.fm.email.value=="" ){
+                
+                alert("please enter your email");
+                document.fm.email.focus();
+                return false;
+            }
+           
+            else return true
+        }
+        function changecolor(color) {
+            document.body.style.backgroundColor=color;
+            if (color=='red'){document.body.style.fontFamily="Arial, Helvetica, sans-serif";document.getElementById('hw').style.color="green";
+        }
+            else if (color=="green")
+            {
+                document.body.style.fontFamily="'Times New Roman', Times, serif";
+                document.getElementById('hw').style.color="blue";
+            }
+            else { document.body.style.fontFamily="Georgia, 'Times New Roman', Times, serif";
+            document.getElementById('hw').style.color="green";
+        }
+            
+        }
+    </script>
+    <h1 style="font-size: 500%; " id="hw"> welcome to anits website</h1>
+    <p style="font-size: 250%; ">this is cse department</p>
+    <form name="fm" onsubmit="return fd()" action="#">
+    <table style="margin-left: 40%;">
+        <tr>
+            <td>
+                name
+            </td>
+            <td>
+                <input name="name" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input name="email" type="email"></td>
+        </tr>
+        
+    </table>
+    
+        <input type="submit"  >
+        <input type="reset"><br> <br>
+    </form>
+    
+    <input type="radio" name="gen" id="red" onclick="changecolor('red')"> red <br>
+    <input type="radio" name="gen" id="green" onclick="changecolor('green')" style="margin-left: 13px;">green <br>
+    <input type="radio" name="gen" id="yellow" onclick="changecolor('yellow')" style="margin-left: 20px;">yellow<br> <br>
+
+   
+    <button onclick="fn()">click me</button>
+    <option id="result"></option>
+    
+
+</body>
+</html>

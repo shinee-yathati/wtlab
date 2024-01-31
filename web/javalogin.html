@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: linen;
+            margin-top: 5%;
+        }
+        table {
+            margin-left: 42%;
+        }
+        button {
+            margin-left: 5%;
+            max-width: 50px;
+            padding: 8px;
+            text-align: center;
+            font-size: 15px;
+        }
+        img {
+            background-color: lightpink;
+            color: lightpink;
+            border-radius: 50%;
+            align-items: end;
+        }
+        p {
+            color: brown;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        span {
+            color: red;
+        }
+    </style>
+    <script>
+        function fd() {
+            if (document.fm.name.value === "") {
+                alert("Please enter your email");
+                document.fm.name.focus();
+                return false;
+            } else if (document.fm.email.value === "") {
+                alert("Please enter your password");
+                document.fm.email.focus();
+                return false;
+            }
+            else if (document.fm.email.value<8){
+                alert("password is lessthan 8 characters");
+                document.fm.email.focus();
+                return false;
+            } else return true;
+        }
+        document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        alert("Right-click is disabled on this page.")
+    });
+    </script>
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIrxPSJI-uVlJtW6uLDwKFu13Ys9rqfpjo_w&usqp=CAU" style="width:15%;" bgcolor="lightpink">
+    <h1 style="margin-bottom: 0%;"> LOGIN DETAILS</h1>
+    <form name="fm" onsubmit="return fd()" action="#">
+        <table cellspacing="10">
+            <tr>
+                <td>email</td>
+                <td><input type="email" id="name"></td>
+            </tr><br>
+            <tr>
+                <td>password</td>
+                <td><input type="password" id="email"></td>
+            </tr>
+        </table><br>
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="#">Create an account</a></p>
+    </form>
+</body>
+</html>

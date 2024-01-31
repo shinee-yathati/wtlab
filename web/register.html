@@ -1,0 +1,202 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="INDEX.CSS">
+<style>
+    form{
+        width:60%;
+        margin-left: 200px;
+    }
+    input{
+        border-radius: 10px;
+    }
+</style>
+</head>
+<body >
+<script>
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        alert("Right-click is disabled on this page.")
+    });
+   function validateForm()
+   {
+    if(document.myForm.name.value ==='')
+    {
+        alert("please fill the name");
+        document.myForm.name.focus();
+         return false;
+    }
+
+    else if(document.myForm.email.value ==='')
+    {
+        alert("please fill the email");
+        document.myForm.email.focus();
+         return false;
+    }
+    
+    else if(document.myForm.gen.value ==='')
+    {
+        alert("please fill the gender");
+        document.myForm.gen.focus();
+         return false;
+    }
+    
+    else if(document.myForm.rel.value ==='')
+    {
+        alert("please fill the religion");
+        document.myForm.rel.focus();
+         return false;
+    }
+    
+    else if(document.myForm.dob.value ==='')
+    {
+        alert("please fill the date of birth");
+        document.myForm.dob.focus();
+         return false;
+    }
+    
+    else if(document.myForm.no.value ==='')
+    {
+        alert("please fill your number");
+        document.myForm.no.focus();
+         return false;
+    }
+    
+    else if(document.myForm.add.value ==='')
+    {
+        alert("please fill your address");
+        document.myForm.add.focus();
+         return false;
+    }
+    
+    else if(document.myForm.b.value ==='')
+    {
+        alert("please fill ur btech marks");
+        document.myForm.b.focus();
+         return false;
+    }
+    
+    else if(document.myForm.i.value ==='')
+    {
+        alert("please fill your inter marks");
+        document.myForm.i.focus();
+         return false;
+    }
+    
+    else if(document.myForm.ten.value ==='')
+    {
+        alert("please fill your tenth marks");
+        document.myForm.ten.focus();
+         return false;
+    }
+    
+    else  if(document.myForm.name.value.length >20)
+    {
+        alert("your name is too long");
+        document.myForm.name.focus();
+         return false;
+    }
+    
+    else   var mobile = document.forms["myForm"]["no"].value;
+        if (mobile.length > 10 || isNaN(mobile) || mobile.length < 10) {
+            alert("Mobile Number must be a numerical value with a maximum length of 10 digits");
+            document.myForm.no.focus();
+            return false;
+        }
+
+    else  var b = document.forms["myForm"]["b"].value;
+        if ( !isNaN(mobile)) {
+            alert("only marks are required");
+            document.myForm.b.focus();
+            return false;
+        }
+        else  var i = document.forms["myForm"]["i"].value;
+        if ( !isNaN(mobile)) {
+            alert("only marks are required");
+            document.myForm.i.focus();
+            return false;
+        }
+        else  var ten = document.forms["myForm"]["ten"].value;
+        if ( !isNaN(mobile)) {
+            alert("only marks are required");
+            document.myForm.ten.focus();
+            return false;
+        }
+  return true;
+   }
+</script>
+<form  name="myForm" onsubmit="validateForm()" action="#">
+    <fieldset></fieldset>
+        <legend>
+            PERSONAL INFORMATION
+        </legend>
+        <table class="one">
+            <tr>
+                <td>NAME:</td>
+                <td><input type="text" name="un" id="name"> </td>
+            </tr>
+            <tr>
+                <td>EMAIL:</td>
+                <td><input type="email" name="un" id="email"> </td>
+            </tr>
+            <tr>
+                <td>GENDER:</td>
+                <td><input type="radio" name="gen" id="gen">MALE </td>
+                <td><input type="radio" name="gen" id="gen"> FEMALE</td>
+            </tr>
+            <tr>
+                <td>RELIGION:</td>
+                <td><select name="rel" id="rel">
+                    <option></option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Muslim">muslim</option>
+                    <option value="christian">christian</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>DOB:</td>
+                <td><input type="date" name="DOB" id="dob"> </td>
+            </tr>
+            <tr>
+                <td>MOBILE NO.:</td>
+                <td><input type="tel" name="mobile" id="no"> </td>
+            </tr>
+            <tr>
+                <td>ADDRESS:</td>
+                <td><textarea rows="5" cols="10" id="add"></textarea> </td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>
+            EDUCATIONAL DETAILS
+        </legend>
+        <table class="two">
+            <tr>
+                <td>Btech cgpa:</td>
+                <td><input type="text" id="b"></td>
+            </tr>
+            <tr>
+                <td>inter:</td>
+                <td><input type="text" id="i"></td>
+            </tr>
+            <tr>
+                <td>10th percentage:</td>
+                <td><input type="text" id="ten"></td>
+            </tr>
+            <tr>
+                <td>form password</td>
+                <td> <input type="password" id="password"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <table class="three">
+        <tr>
+            <td><input type="submit" ></td>
+            <td><input type="reset"></td>
+
+        </tr>
+    </table>
+</form>
+</body>
+</html>
